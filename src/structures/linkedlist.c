@@ -1,7 +1,6 @@
 /**
  * linkedlist.c
  * implementation for the linked list structure
- * +
  */
 
 #include "linkedlist.h"

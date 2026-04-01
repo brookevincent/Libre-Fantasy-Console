@@ -1,6 +1,6 @@
 /**
  * stack.c
- * implementaation of a generic c stack
+ * implementation of a generic c stack
  */
 
 #include "stack.h"
