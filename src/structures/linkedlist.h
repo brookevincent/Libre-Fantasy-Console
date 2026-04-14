@@ -6,10 +6,12 @@
 #ifndef __LINKED_LIST__
 #define __LINKED_LIST__
 
+#include <stddef.h>
+
 /**
  * node structure for a linked list
  */
-typedef struct Node {
+typedef struct {
     /**
      * data of a node
      */
@@ -23,7 +25,7 @@ typedef struct Node {
 /**
  * linked list structure
  */
-typedef struct LinkedList {
+typedef struct {
     /**
      * front of the linked list
      */
@@ -31,7 +33,7 @@ typedef struct LinkedList {
     /**
      * total number of elements in the linked list
      */
-    int size;
+    size_t size;
 } LinkedList;
 
 /**
@@ -69,7 +71,7 @@ void *ll_find(LinkedList *l, void *target, int (*compfunc)(void *, void *));
 /**
  * returns the size of the linked list
  */
-int ll_size(LinkedList *l);
+size_t ll_size(LinkedList *l);
 
 /**
  * removes all of the nodes from the list, freeing the associated data using the given function

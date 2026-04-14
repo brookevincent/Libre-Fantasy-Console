@@ -142,18 +142,18 @@ void *ll_find(LinkedList *l, void *target, int (*compfunc)(void *, void *)){
     //traverse linked list
     Node* cur = l->head;
 
-    while( cur->next != NULL && !compfunc(target, cur->data)){
+    while( cur->next != NULL && compfunc(target, cur->data) != 0){
         cur = cur->next;
     }
 
-    if (compfunc(target, cur->data)) return cur->data;
+    if (compfunc(target, cur->data) == 0) return cur->data;
     else return NULL;
 }
 
 /**
  * returns the size of the linked list
  */
-int ll_size(LinkedList *l){
+size_t ll_size(LinkedList *l){
     return l->size;
 }
 

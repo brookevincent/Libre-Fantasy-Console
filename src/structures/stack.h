@@ -8,16 +8,16 @@
 
 #include <stdlib.h>
 
-typedef struct Stack {
+typedef struct {
     void **data;
     void **top;
-    int capacity;
+    size_t capacity;
 } Stack;
 
 /**
  * returns a reference to an allocated stack.
  */
-Stack *stk_create(int capacity);
+Stack *stk_create(size_t capacity);
 
 /**
  * frees all space allocated for the stack.
@@ -29,7 +29,7 @@ void stk_destroy(Stack *stack);
 /**
  * returns the number of items in the given stack.
  */
-int stk_size(Stack *stack);
+size_t stk_size(Stack *stack);
 
 /**
  * adds the given item to the top of the given stack.
